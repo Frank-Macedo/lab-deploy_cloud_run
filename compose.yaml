@@ -1,0 +1,7 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      API_KEY: a6ebeb8f1cd7414cb6d04830261702

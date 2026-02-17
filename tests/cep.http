@@ -1,0 +1,2 @@
+GET   http://localhost:8080/temperature/061612301234
+Content-Type: application/json
