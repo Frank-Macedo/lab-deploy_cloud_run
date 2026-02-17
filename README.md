@@ -86,6 +86,20 @@ services:
       - PORT=8080
 ```
 
+## Serviço publicado (Cloud Run)
+
+O serviço está publicado no Cloud Run nos seguintes URLs públicos:
+
+- https://app-forecast-358157478924.us-central1.run.app/ — Página de boas-vindas (`GET /`).
+- https://app-forecast-358157478924.us-central1.run.app/temperature/06150160 — Exemplo: consulta temperatura para o CEP `06150160`.
+
+Você pode testar com `curl`:
+
+```
+curl https://app-forecast-358157478924.us-central1.run.app/
+curl https://app-forecast-358157478924.us-central1.run.app/temperature/06150160
+```
+
 ## Variáveis de ambiente
 
 - `API_KEY` — chave da WeatherAPI (obrigatória).
