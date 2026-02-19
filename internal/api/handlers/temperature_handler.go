@@ -32,5 +32,5 @@ func GetTemperature(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(fmt.Sprintf("%v°C, %v°F, %vK", weather.Current.TempC, weather.Current.TempF, weather.Current.TempC+273.15)))
+	fmt.Fprintf(w, `{"temp_C": %.2f, "temp_F": %.2f, "temp_K": %.2f}`, weather.Current.TempC, weather.Current.TempF, weather.Current.TempC+273.15)
 }
